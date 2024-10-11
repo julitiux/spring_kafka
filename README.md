@@ -26,3 +26,9 @@ bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localh
 ```temrinal
 bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
 ```
+
+##  READ THE EVENTS
+
+```terminal
+bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+```
