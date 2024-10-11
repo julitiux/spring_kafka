@@ -20,3 +20,9 @@ bin/kafka-server-start.sh config/server.properties
 ```terminal
 bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
 ```
+
+## WRITE SOME EVENTS INTO THE TOPIC
+
+```temrinal
+bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
+```
