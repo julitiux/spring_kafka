@@ -6,3 +6,4 @@ spring:
     consumer:
       bootstrap-servers: localhost:9092 # we can provide multiple servers not only one
       group-id: myGroup # group of consumers
+      auto-offset-reset: earliest # what we want to do in case we lose the reset or we want to reset out offset. (Automatically reset the offset to the earliest offset)
