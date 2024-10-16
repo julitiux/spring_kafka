@@ -9,3 +9,6 @@ spring:
       auto-offset-reset: earliest # what we want to do in case we lose the reset or we want to reset out offset. (Automatically reset the offset to the earliest offset)
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer # using th key deserializer cos the produces give us a message serialized.
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer # using th value deserializer cos the produces give us a message serialized.
+
+    producer:
+      bootstrap-servers: localhost:9092 # same broker
