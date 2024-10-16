@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class KafkaConsumer {
 
-  @KafkaListener
+  @KafkaListener(topics = "quickstart-events")
   public void consumerMessage(String message) {
 
     log.info("Consuming the message from quickstart-events Topic:: {}", message);
