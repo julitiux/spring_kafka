@@ -1,1 +1,3 @@
-spring.application.name=spring_kafka
+spring:
+  application:
+    name: spring_kafka
