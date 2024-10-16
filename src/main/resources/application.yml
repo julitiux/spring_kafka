@@ -5,3 +5,4 @@ spring:
   kafka:
     consumer:
       bootstrap-servers: localhost:9092 # we can provide multiple servers not only one
+      group-id: myGroup # group of consumers
