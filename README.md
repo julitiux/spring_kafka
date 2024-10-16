@@ -32,3 +32,9 @@ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server local
 ```terminal
 bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
 ```
+
+## httpie example
+
+```terminal
+http POST :8080/api/v1/messages message="This is a test message"
+```
