@@ -38,3 +38,7 @@ bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --boots
 ```terminal
 http POST :8080/api/v1/messages message="This is a test message"
 ```
+
+```terminal
+http POST :8080/api/v1/messages/json id:=1 firstName="Julio" lastName="Ramirez"
+```
