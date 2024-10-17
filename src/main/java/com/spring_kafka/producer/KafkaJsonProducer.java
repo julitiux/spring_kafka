@@ -17,8 +17,8 @@ public class KafkaJsonProducer {
   public void sendMessage(Student student){
 
     Message<Student> message = MessageBuilder
-      .withPayload(student)
-      .setHeader(KafkaHeaders.TOPIC, "quickstart-events")
+      .withPayload(student) // Payload is the Student object
+      .setHeader(KafkaHeaders.TOPIC, "quickstart-events") // the Topic that will Producer
       .build();
 
   }
