@@ -10,6 +10,8 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer # using th key deserializer cos the produces give us a message serialized.
 #      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer # using th value deserializer cos the produces give us a message serialized.
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: '*'
 
     producer:
       bootstrap-servers: localhost:9092 # same broker
