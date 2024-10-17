@@ -14,13 +14,14 @@ public class KafkaJsonProducer {
 
   private final KafkaTemplate<String, Student> kafkaTemplate;
 
-  public void sendMessage(Student student){
+  public void sendMessage(Student student) {
 
     Message<Student> message = MessageBuilder
       .withPayload(student) // Payload is the Student object
       .setHeader(KafkaHeaders.TOPIC, "quickstart-events") // the Topic that will Producer
       .build();
 
+    kafkaTemplate.send(message);
   }
 
 }
