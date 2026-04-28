@@ -32,6 +32,7 @@ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server local
 ```terminal
 bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
 ```
+# Using JVM Based Apache Kafka Docker Image
 
 ## httpie example
 
