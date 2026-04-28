@@ -34,6 +34,11 @@ bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --boots
 ```
 # Using JVM Based Apache Kafka Docker Image
 
+## Get the Docker Image
+```terminal
+docker pull apache/kafka:4.2.0
+```
+
 ## httpie example
 
 ```terminal
