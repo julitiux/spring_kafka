@@ -39,6 +39,11 @@ bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --boots
 docker pull apache/kafka:4.2.0
 ```
 
+## Start the Kafka Docker container:
+```terminal 
+docker run -p 9092:9092 apache/kafka-native:4.2.0
+```
+
 ## httpie example
 
 ```terminal
