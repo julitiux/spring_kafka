@@ -70,6 +70,14 @@ docker exec -it kafka \
 --replication-factor 1
 ```
 
+## list topics
+```terminal 
+docker exec -it kafka \
+/opt/kafka/bin/kafka-topics.sh \
+--list \
+--bootstrap-server localhost:9092
+```
+
 ## httpie example
 
 ```terminal
