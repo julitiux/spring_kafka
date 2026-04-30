@@ -49,6 +49,15 @@ docker run -p 9092:9092 apache/kafka-native:4.2.0
 docker ps 
 ```
 
+## Create a topic to store your events
+```terminal
+docker exec -it <name_container> \
+bin/kafka-topics.sh \
+--create \
+--topic quickstart-events \
+--bootstrap-server localhost:9092
+```
+
 ## httpie example
 
 ```terminal
