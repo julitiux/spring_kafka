@@ -44,6 +44,11 @@ docker pull apache/kafka:4.2.0
 docker run -p 9092:9092 apache/kafka-native:4.2.0
 ```
 
+## Get the container name 
+```terminal
+docker ps 
+```
+
 ## httpie example
 
 ```terminal
