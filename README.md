@@ -51,11 +51,13 @@ docker ps
 
 ## Create a topic to store your events
 ```terminal
-docker exec -it <name_container> \
-bin/kafka-topics.sh \
+docker exec -it kafka \
+/opt/kafka/bin/kafka-topics.sh \
 --create \
 --topic quickstart-events \
---bootstrap-server localhost:9092
+--bootstrap-server localhost:9092 \
+--partitions 1 \
+--replication-factor 1
 ```
 
 ## httpie example
