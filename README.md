@@ -81,7 +81,18 @@ docker exec -it kafka \
 --bootstrap-server localhost:9092
 ```
 
-## httpie example
+## Start consumer
+```terminal 
+docker exec -it kafka \
+/opt/kafka/bin/kafka-console-consumer.sh \
+--topic quickstart-events \
+--bootstrap-server localhost:9092
+```
+
+
+
+
+# httpie example
 
 ```terminal
 http POST :8080/api/v1/messages message="This is a test message"
