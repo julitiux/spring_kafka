@@ -89,8 +89,13 @@ docker exec -it kafka \
 --bootstrap-server localhost:9092
 ```
 
-
-
+## Start producer
+```terminal
+docker exec -it kafka \
+/opt/kafka/bin/kafka-console-producer.sh \
+--topic quickstart-events \
+--bootstrap-server localhost:9092
+```
 
 # httpie example
 
