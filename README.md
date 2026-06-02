@@ -103,6 +103,12 @@ docker exec -it kafka \
 http POST :8080/api/v1/messages message="This is a test message"
 ```
 
+```terminal 
+http -v POST localhost:8080/api/v1/messages \
+Content-Type:text/plain \
+<<< "First mensaje"
+```
+
 ```terminal
 http POST :8080/api/v1/messages/json id:=1 firstName="Julio" lastName="Ramirez"
 ```
