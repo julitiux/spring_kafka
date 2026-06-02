@@ -17,7 +17,7 @@ public class KafkaProducer {
   }
 
   public void sendMessage(String message) {
-    log.info(format("Sending message to kafka: %s", message));
+    log.info(format("Sending message to kafka :: %s", message));
     kafkaTemplate.send("quickstart-events", message);
   }
 }
