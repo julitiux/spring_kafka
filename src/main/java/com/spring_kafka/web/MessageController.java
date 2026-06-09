@@ -1,5 +1,6 @@
 package com.spring_kafka.web;
 
+import com.spring_kafka.producer.KafkaJsonProducer;
 import com.spring_kafka.producer.KafkaProducer;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,9 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class MessageController {
 
   private final KafkaProducer kafkaProducer;
+  private final KafkaJsonProducer kafkaJsonProducer;
 
-  public MessageController(KafkaProducer producer) {
+  public MessageController(KafkaProducer producer, KafkaJsonProducer kafkaJsonProducer) {
     this.kafkaProducer = producer;
+    this.kafkaJsonProducer = kafkaJsonProducer;
   }
 
   @PostMapping()
