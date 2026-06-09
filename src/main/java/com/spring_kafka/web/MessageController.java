@@ -1,5 +1,6 @@
 package com.spring_kafka.web;
 
+import com.spring_kafka.payload.Student;
 import com.spring_kafka.producer.KafkaJsonProducer;
 import com.spring_kafka.producer.KafkaProducer;
 import org.springframework.http.ResponseEntity;
@@ -25,5 +26,12 @@ public class MessageController {
 
     kafkaProducer.sendMessage(message);
     return ResponseEntity.ok().body("Message queued successfully");
+  }
+
+  @PostMapping("/json")
+  public ResponseEntity<String> sendJsonMessage(@RequestBody Student message) {
+
+    kafkaJsonProducer.sendMessage(message);
+    return ResponseEntity.ok().body("Message queued successfully as JSON");
   }
 }
