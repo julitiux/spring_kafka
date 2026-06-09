@@ -14,6 +14,4 @@ public class KafkaJsonConsumer {
 
     log.info(String.format("Consuming the message from quickstart-events Topi :: %s", student));
   }
-
-
 }
