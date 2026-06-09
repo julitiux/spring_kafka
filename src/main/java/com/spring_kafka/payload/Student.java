@@ -2,7 +2,9 @@ package com.spring_kafka.payload;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
+@ToString
 @Getter
 @Setter
 public class Student {
