@@ -32,6 +32,7 @@ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server local
 ```terminal
 bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
 ```
+
 # Using JVM Based Apache Kafka Docker Image
 
 ## Get the Docker Image
@@ -97,18 +98,21 @@ docker exec -it kafka \
 --bootstrap-server localhost:9092
 ```
 
-# httpie example
+# Post Request to send message to topic Kafka 
 
+## Send a String Message to 'quickstart-events' Topic
 ```terminal
 http POST :8080/api/v1/messages message="This is a test message"
 ```
 
+## Send a String Message to 'quickstart-events' Topic using Content-Type 
 ```terminal 
 http -v POST localhost:8080/api/v1/messages \
 Content-Type:text/plain \
 <<< "First mensaje"
 ```
 
+## Send a JSON Message to 'quickstart-events' Topic
 ```terminal
 http POST :8080/api/v1/messages/json id:=1 firstName="Julio" lastName="Ramirez"
 ```
